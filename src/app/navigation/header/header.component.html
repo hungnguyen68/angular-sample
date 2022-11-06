@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" role="heading">
+      <div>Hung's assignment</div>
+      <div class="header-button-row">
+        <a mat-icon-button aria-label="Home Page" [routerLink]="['/home']">
+            <mat-icon>home</mat-icon>
+        </a>
+        <a mat-raised-button [routerLink]="['/posts']">Posts</a>
+        <button mat-raised-button [routerLink]="['/profile']"> Profile</button>
+        <button mat-raised-button [routerLink]="['/login']" *ngIf = "!userIsAuthenticated">Login</button>
+        <button mat-raised-button (click)="onLogout()" *ngIf = "userIsAuthenticated">Logout</button>
+      </div>
+</mat-toolbar>

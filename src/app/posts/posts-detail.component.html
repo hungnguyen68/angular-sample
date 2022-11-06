@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="post-detail-header">
+    <h3>Post detail</h3>
+</div>
+<mat-divider></mat-divider>
+<div *ngIf="post" class="post-detail-content">
+    <p><strong>Id</strong>: {{ post.id }}</p>
+    <p><strong>Title</strong>: {{ post.title }}</p>
+    <p><strong>Body</strong>: {{ post.body }}</p>
+    <button mat-raised-button color="primary" (click)="back()"> Back</button>
+</div>

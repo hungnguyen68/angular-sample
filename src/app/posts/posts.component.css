@@ -1,0 +1,17 @@
+.ngx-datatable {
+    text-align: left;
+    width: 80%;
+    margin: 5px auto;
+}
+
+div.search-form {
+    width: 80%;
+    margin-left: 10%;
+    justify-content: right;
+  }
+  
+  .search-full-width {
+    width: 300px;
+    padding-left: 8px;
+    margin-top: 10px;
+  }

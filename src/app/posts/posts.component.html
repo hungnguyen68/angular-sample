@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="search-form">
+    <mat-form-field class="search-full-width" appearance="fill">
+        <mat-label>Search posts</mat-label>
+        <input matInput placeholder="Search by title or body" (keyup)="updateFilter($event)" #searchInput>
+        <button matSuffix mat-icon-button (click)="clearSearch()">
+            <mat-icon>clear</mat-icon>
+        </button>
+    </mat-form-field>
+</div>
+
+<div>
+    <ngx-datatable #firstTable [rows]="rows" class="material" [columnMode]="ColumnMode.force" [headerHeight]="50"
+        [footerHeight]="50" rowHeight="auto" [reorderable]="reorderable" [limit]="5">
+
+        <ngx-datatable-column name="Id" prop="id" [width]="8"></ngx-datatable-column>
+        <ngx-datatable-column name="Title" prop="title" [width]="8"></ngx-datatable-column>
+        <ngx-datatable-column name="Body">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                {{ truncate(value) }}
+            </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Action" prop="id" [sortable]="false" [width]="10" value="Detail">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <a mat-icon-button aria-label="Detail" (click)="viewPostDetail(value)" title="view detail">
+                    <mat-icon>description</mat-icon>
+                </a>
+                <a mat-icon-button aria-label="Delete" (click)="deletePosts(value)" title="Delete item">
+                    <mat-icon>delete</mat-icon>
+                </a>
+            </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+</div>

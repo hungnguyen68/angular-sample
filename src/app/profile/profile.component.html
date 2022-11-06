@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div class="user-detail-header">
+    <h3>User detail</h3>
+</div>
+<mat-divider></mat-divider>
+<div *ngIf="user" class="user-detail-content">
+    <p><strong>Id</strong>: {{ user.id }}</p>
+    <p><strong>Name</strong>: {{ user.name }}</p>
+    <button mat-raised-button color="primary" (click)="back()"> Back</button>
+</div>

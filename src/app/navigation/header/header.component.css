@@ -1,0 +1,9 @@
+.header-button-row {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.header-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
