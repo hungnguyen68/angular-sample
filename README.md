@@ -12,7 +12,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Nuget restore
 
-Run the comment npm install --force for forcing nuget restoore
+Run the comment `npm install --force` for forcing nuget restoore
 
 ## Build
 
